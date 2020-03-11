@@ -1,0 +1,21 @@
+{
+  "name": "node-blog",
+  "version": "1.0.0",
+  "description": "Blog using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run open-cli\" \"npm run nodemon\"",
+    "nodemon": "nodemon index.js",
+    "open-cli": "open-cli http://localhost:3000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "open-cli": "^5.0.0"
+  }
+}
