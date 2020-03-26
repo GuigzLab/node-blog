@@ -1,0 +1,34 @@
+extends ../components/layout.pug
+
+block variables
+     - let title = 'Administration';
+
+block content
+     .container.mt-4
+          h1 Administration
+          table.table
+               thead
+                    th(scope="col") #
+                    th(scope="col") Date de publication
+                    th(scope="col") Titre
+                    th(scope="col") Catégorie
+                    th(scope="col") Actions
+               tbody
+                    tr
+                         th(scope="row") 1
+                         td XX/XX/XXXX à XX:XX
+                         td Lorem
+                         td Beauté
+                         td
+                              a(href="/delete/:id").btn.btn-danger.mr-3 Supprimer
+                              a(href="/edit/:id").btn.btn-warning Modifier
+                    tr
+                         th(scope="row") 2
+                         td XX/XX/XXXX à XX:XX
+                         td Lorem Ipsum
+                         td Mode
+                         td
+                              a(href="/delete/:id").btn.btn-danger.mr-3 Supprimer
+                              a(href="/edit/:id").btn.btn-warning Modifier
+
+          a(href="/admin/write").btn.btn-primary.ml-auto Créer un nouvel article

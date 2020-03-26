@@ -15,6 +15,7 @@ const PORT = 3000;
 const HOST = 'localhost';
 
 app.use('/', blogRouter);
+app.use(express.static('./public'));
 
 const uri = `mongodb+srv://${encodeURIComponent(process.env.DB_USER)}:${encodeURIComponent(process.env.DB_PASSWORD)}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 

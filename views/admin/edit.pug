@@ -1,0 +1,32 @@
+extends ../components/layout.pug
+
+block variables
+     - let title = 'Editer l\'article ...';
+
+block content
+     .container.mt-4
+          h1 Editer l'article ...
+          form.mb-5
+               .form-group    
+                    label(for="title")
+                         h4 Titre
+                    input#title(type="text", name="title").form-control
+               .form-group    
+                    label(for="category")
+                         h4 Catégorie
+                    select#category(name="category").form-control
+                         option(value="fashion") Mode
+                         option(value="beauty") Beauté
+                         option(value="food") Nourriture
+               .form-group    
+                    label(for="content")
+                         h4 Contenu
+                    textarea#content(name="content", cols="30", rows="10").form-control
+               .form-group    
+                    label(for="author")
+                         h4 Auteur
+                    select#author(name="author").form-control
+                         option(value="fashion") Guigz
+                         option(value="beauty") Toto
+                         option(value="food") Tutu
+               button(type="submit").btn.btn-primary Modifier

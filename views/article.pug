@@ -1,0 +1,11 @@
+extends ./components/layout.pug
+
+block variables
+     - let title = 'Article #1';
+
+block content
+     .container.mt-4
+          a(href="/").my-3 &larr; Retour à la liste des articles
+          h1 Premier article
+          small Publié le XX/XX/XXXX à XX:XX, par XXXX
+          p.mt-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore rem, maxime repellendus atque architecto odio incidunt, saepe magni eos laborum dolorem dolor illo autem est laudantium ducimus, omnis cum reiciendis.

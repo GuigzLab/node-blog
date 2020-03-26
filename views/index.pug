@@ -1,11 +1,28 @@
-<!DOCTYPE html>
-html(lang="fr")
-     head
-          meta(charset="UTF-8")
-          meta(name="viewport", content="width=device-width, initial-scale=1.0")
-          title Document
-          link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh", crossorigin="anonymous")
-     body
-          .container.mt-4
-               h1 Bienvenue sur mon app Pug
-               p Bonjour #{name} le bg
+extends ./components/layout.pug
+
+block variables
+     - let title = 'Accueil';
+
+block content
+     .container.mt-4
+          h1 Bienvenue sur mon app Pug
+          p Bonjour #{name} le bg
+          .row
+               .col-md-6
+                    .card.mt-4
+                         .card-body
+                              h5.card-title Titre
+                              p.card-text texte bla bla bla
+                              a(href="#").card-link Lire la suite
+                              br
+                              .badge.badge-info.m-1 Catégorie #1
+               .col-md-6
+                    .card.mt-4
+                         .card-body
+                              h5.card-title Titre 2
+                              p.card-text texte bla bla bla
+                              a(href="#").card-link Lire la suite
+                              br
+                              .badge.badge-info.m-1 Catégorie #1
+                              .badge.badge-info.m-1 Catégorie #2
+                         
